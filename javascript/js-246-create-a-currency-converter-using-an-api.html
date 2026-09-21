@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create a currency converter using an API | Practical Programs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Create a currency converter using an API</h1>
+  <p>Mini Projects practical experiment</p>
+  <p><strong>P. Gowtham</strong> · Section 6 · PRN 250200209</p>
+</header>
+<main class="container">
+  <nav class="nav">
+    <a class="btn" href="../index.html">Home</a>
+    <a class="btn green" href="index.html">Back to Mini Projects Programs</a>
+  </nav>
+  <section class="demo">
+    <span class="badge">Mini Projects</span>
+    <h2>Create a currency converter using an API</h2>
+    <button class='btn' onclick='loadData()'>Fetch Demo API Data</button><div id='out' class='result'>Click to fetch.</div>
+  </section>
+</main>
+<footer>HTML · CSS · JavaScript Practical Programs · P. Gowtham · Section 6 · PRN 250200209</footer>
+<script>
+async function loadData(){try{const r=await fetch('https://jsonplaceholder.typicode.com/todos/1');const d=await r.json();out.textContent=`Fetched: ${d.title}`}catch(e){out.textContent='API unavailable in offline mode.'}}
+</script>
+</body>
+</html>
