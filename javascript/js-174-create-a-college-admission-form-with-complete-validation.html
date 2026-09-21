@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create a college admission form with complete validation | Practical Programs</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Create a college admission form with complete validation</h1>
+  <p>Forms &amp; Validation practical experiment</p>
+  <p><strong>P. Gowtham</strong> · Section 6 · PRN 250200209</p>
+</header>
+<main class="container">
+  <nav class="nav">
+    <a class="btn" href="../index.html">Home</a>
+    <a class="btn green" href="index.html">Back to Forms &amp; Validation Programs</a>
+  </nav>
+  <section class="demo">
+    <span class="badge">Forms &amp; Validation</span>
+    <h2>Create a college admission form with complete validation</h2>
+    <form id='form'><label>Name</label><input id='name' required pattern='[A-Za-z ]{2,}'><label>Email</label><input id='email' type='email' required><label>Password</label><input id='pass' type='password' minlength='6' required><button class='btn'>Validate</button></form><div id='out' class='result'></div>
+  </section>
+</main>
+<footer>HTML · CSS · JavaScript Practical Programs · P. Gowtham · Section 6 · PRN 250200209</footer>
+<script>
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('out').textContent=e.target.checkValidity()?'Valid form.':'Please correct the fields.';e.target.reportValidity()})
+</script>
+</body>
+</html>
